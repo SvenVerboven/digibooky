@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonView;
 import com.hobby.digibooky.dtos.BookDto;
 import com.hobby.digibooky.services.BookService;
 import com.hobby.digibooky.services.Views;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -18,6 +20,7 @@ import java.util.List;
 @RequestMapping(path = "/books")
 public class BookController {
 
+    private final Logger logger = LoggerFactory.getLogger(BookController.class);
     private BookService bookService;
 
     @Autowired
@@ -29,6 +32,7 @@ public class BookController {
     @ResponseStatus(HttpStatus.OK)
     @JsonView(Views.Public.class)
     public List<BookDto>getAllBooks(){
+        logger.info("Returned all books");
         return bookService.getAllBooks();
     }
 }
