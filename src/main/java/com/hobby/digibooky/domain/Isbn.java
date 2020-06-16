@@ -12,4 +12,12 @@ public class Isbn {
     }
 
     public Isbn(){}
+
+    public String getIsbnNumber() {
+        return isbnNumber;
+    }
+
+    public void setIsbnNumber(String isbnNumber) {
+        this.isbnNumber = isbnNumber;
+    }
 }

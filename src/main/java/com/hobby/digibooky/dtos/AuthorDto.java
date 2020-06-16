@@ -1,19 +1,19 @@
-package com.hobby.digibooky.domain;
+package com.hobby.digibooky.dtos;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonView;
+import com.hobby.digibooky.services.Views;
 
-@Entity
-public class Author {
+public class AuthorDto {
 
-    @Id
+    @JsonView(Views.Public.class)
     private Long id;
+    @JsonView(Views.Public.class)
     private String firstName;
+    @JsonView(Views.Public.class)
     private String lastName;
 
-    public Author() {
-    }
-
-    public Author(String firstName, String lastName) {
+    public AuthorDto(Long id, String firstName, String lastName) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
