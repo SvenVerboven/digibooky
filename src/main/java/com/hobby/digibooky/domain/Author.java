@@ -1,7 +1,6 @@
 package com.hobby.digibooky.domain;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 public class Author {
@@ -10,7 +9,12 @@ public class Author {
     private Long id;
     private String firstName;
     private String lastName;
-    @OneToMany
-    @JoinColumn(name = "AUTHOR_ID")
-    private List<Book> books;
+
+    public Author() {
+    }
+
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 }

@@ -1,31 +1,26 @@
-package com.hobby.digibooky.domain;
+package com.hobby.digibooky.dtos;
 
-import javax.persistence.*;
+import com.hobby.digibooky.domain.Author;
+import com.hobby.digibooky.domain.Isbn;
 
-@Entity
-public class Book {
+public class BookDto {
 
-    @Id
     private Long id;
-    @Embedded
     private Isbn isbn;
     private String title;
     private String summary;
     private boolean deleted;
     private boolean borrowed;
-    @ManyToOne
-    @JoinColumn(name = "AUTHOR_ID")
     private Author author;
 
-    public Book(){}
-
-    public Book(Isbn isbn, String title, String summary, Author author) {
+    public BookDto(Long id, Isbn isbn, String title, String summary, boolean deleted, boolean borrowed, Author author) {
+        this.id = id;
         this.isbn = isbn;
         this.title = title;
         this.summary = summary;
+        this.deleted = deleted;
+        this.borrowed = borrowed;
         this.author = author;
-        this.deleted = false;
-        this.borrowed = false;
     }
 
     public Long getId() {
