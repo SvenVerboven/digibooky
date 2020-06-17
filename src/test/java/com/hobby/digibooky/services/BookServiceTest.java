@@ -37,15 +37,52 @@ class BookServiceTest {
             "Harry Potter and the Chamber of Secrets's",
             "the second book",
             author1);
+    private String emptyBookTitle = null;
+    private String emptyBookIsbn = null;
+    private String emptyFirstName = null;
+    private String emptyLastName = null;
 
     @Test
     void getAllBooks_givenTwoBooks_thenReturnTwoBooks() {
         Mockito.when(bookRepository.findAll()).thenReturn(Lists.newArrayList(book1, book2));
 
-        List<BookDto> books = bookService.getAllBooks();
+        List<BookDto> books = bookService.getAllBooks(emptyBookIsbn, emptyBookTitle, emptyFirstName, emptyLastName);
 
         Assertions.assertThat(books).hasSize(2);
         Assertions.assertThat(books.get(0)).isInstanceOf(BookDto.class);
+    }
+
+
+    @Test
+    void getAllBooks_givenFullIsbnWhichMatchesOneBook_thenReturnOneBook() {
+        Mockito.when(bookRepository.findAll()).thenReturn(Lists.newArrayList(book1, book2));
+
+        List<BookDto> books = bookService.getAllBooks(book1.getIsbn().getIsbnNumber(), emptyBookTitle, emptyFirstName, emptyLastName);
+        Assertions.assertThat(books).hasSize(1);
+    }
+
+    @Test
+    void getAllBooks_givenIsbnWithWildcardsWhichMatchesOneBook_thenReturnOneBook() {
+        Mockito.when(bookRepository.findAll()).thenReturn(Lists.newArrayList(book1, book2));
+
+        List<BookDto> books = bookService.getAllBooks("978.23456.*", emptyBookTitle, emptyFirstName, emptyLastName);
+        Assertions.assertThat(books).hasSize(1);
+    }
+
+    @Test
+    void getAllBooks_givenTitleWhichMatchesOneBook_thenReturnOneBook() {
+        Mockito.when(bookRepository.findAll()).thenReturn(Lists.newArrayList(book1, book2));
+
+        List<BookDto> books = bookService.getAllBooks(emptyBookIsbn, book1.getTitle(), emptyFirstName, emptyLastName);
+        Assertions.assertThat(books).hasSize(1);
+    }
+
+    @Test
+    void getAllBooks_givenTitleWithWildcardsWhichMatchesOneBook_thenReturnOneBook() {
+        Mockito.when(bookRepository.findAll()).thenReturn(Lists.newArrayList(book1, book2));
+
+        List<BookDto> books = bookService.getAllBooks(emptyBookIsbn, ".*ch.mBer.*", emptyFirstName, emptyLastName);
+        Assertions.assertThat(books).hasSize(1);
     }
 
     @Test
@@ -63,6 +100,6 @@ class BookServiceTest {
     void getBookById_givenWrongBookId_thenThrowBookNotFoundException() {
         Mockito.when(bookRepository.findById(book1.getId())).thenReturn(Optional.empty());
 
-        Assertions.assertThatThrownBy(()-> bookService.getBookById(book2.getId())).isInstanceOf(BookNotFoundException.class);
+        Assertions.assertThatThrownBy(() -> bookService.getBookById(book2.getId())).isInstanceOf(BookNotFoundException.class);
     }
 }

@@ -28,16 +28,19 @@ public class BookController {
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @JsonView(Views.Public.class)
-    public List<BookDto> getAllBooks() {
+    public List<BookDto> getAllBooks(@RequestParam(required = false) String isbn,
+                                     @RequestParam(required = false) String title,
+                                     @RequestParam(required = false) String firstName,
+                                     @RequestParam(required = false) String lastName) {
         logger.info("Returned all books");
-        return bookService.getAllBooks();
+        return bookService.getAllBooks(isbn, title, firstName, lastName);
     }
 
     @GetMapping(path = "/{bookId}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @JsonView(Views.BookDetail.class)
     public BookDto getBookById(@PathVariable Long bookId) {
-            logger.info("Returned book");
-            return bookService.getBookById(bookId);
+        logger.info("Returned book");
+        return bookService.getBookById(bookId);
     }
 }
