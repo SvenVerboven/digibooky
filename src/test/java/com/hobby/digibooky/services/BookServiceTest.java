@@ -3,6 +3,7 @@ package com.hobby.digibooky.services;
 import com.hobby.digibooky.domain.Author;
 import com.hobby.digibooky.domain.Book;
 import com.hobby.digibooky.domain.Isbn;
+import com.hobby.digibooky.domain.exceptions.BookNotFoundException;
 import com.hobby.digibooky.dtos.BookDto;
 import com.hobby.digibooky.infrastructure.BookRepository;
 import org.assertj.core.api.Assertions;
@@ -14,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.List;
+import java.util.Optional;
 
 @SpringBootTest
 class BookServiceTest {
@@ -39,7 +41,28 @@ class BookServiceTest {
     @Test
     void getAllBooks_givenTwoBooks_thenReturnTwoBooks() {
         Mockito.when(bookRepository.findAll()).thenReturn(Lists.newArrayList(book1, book2));
+
         List<BookDto> books = bookService.getAllBooks();
+
         Assertions.assertThat(books).hasSize(2);
+        Assertions.assertThat(books.get(0)).isInstanceOf(BookDto.class);
+    }
+
+    @Test
+    void getBookById_givenBookId_thenReturnBook() {
+        Mockito.when(bookRepository.findById(book1.getId())).thenReturn(Optional.of(book1));
+
+        BookDto bookDto = bookService.getBookById(book1.getId());
+
+        Assertions.assertThat(bookDto).isNotNull();
+        Assertions.assertThat(bookDto).isInstanceOf(BookDto.class);
+        Assertions.assertThat(bookDto.getId()).isEqualTo(book1.getId());
+    }
+
+    @Test
+    void getBookById_givenWrongBookId_thenThrowBookNotFoundException() {
+        Mockito.when(bookRepository.findById(book1.getId())).thenReturn(Optional.empty());
+
+        Assertions.assertThatThrownBy(()-> bookService.getBookById(book2.getId())).isInstanceOf(BookNotFoundException.class);
     }
 }

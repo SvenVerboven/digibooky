@@ -15,6 +15,7 @@ public class BookDto {
     private IsbnDto isbn;
     @JsonView(Views.Public.class)
     private String title;
+    @JsonView(Views.BookDetail.class)
     private String summary;
     private boolean deleted;
     private boolean borrowed;

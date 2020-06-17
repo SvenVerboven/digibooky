@@ -1,5 +1,6 @@
 package com.hobby.digibooky.api;
 
+import com.hobby.digibooky.domain.exceptions.BookNotFoundException;
 import com.hobby.digibooky.dtos.BookDto;
 import com.hobby.digibooky.services.BookService;
 import org.assertj.core.util.Lists;
@@ -8,13 +9,14 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.assertj.core.internal.bytebuddy.matcher.ElementMatchers.is;
+import javax.servlet.http.HttpServletResponse;
+
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(BookController.class)
@@ -33,5 +35,14 @@ class BookControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(jsonPath("$[*]", hasSize(2)));
+    }
+
+    @Test
+    void getBookById_givenBookId_thenReturnBookDtoAndStatusIs200() throws Exception {
+        Long bookId = 1L;
+        Mockito.when(bookService.getBookById(bookId)).thenReturn(new BookDto());
+        mvc.perform(get(DEFAULT_BOOKS_URL + "/" + bookId))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE));
     }
 }

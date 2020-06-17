@@ -28,7 +28,7 @@ public class BookService {
         return BookMapper.toDto(Lists.newArrayList(bookRepository.findAll()));
     }
 
-    public BookDto getBook(Long bookId){
+    public BookDto getBookById(Long bookId){
         Optional<Book> book = bookRepository.findById(bookId);
         if(!book.isPresent()){
             throw new BookNotFoundException(bookId);

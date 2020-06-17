@@ -1,76 +1,457 @@
-2020-06-16 17:43:32.637  INFO 7988 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 7988 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
-2020-06-16 17:43:32.640  INFO 7988 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
-2020-06-16 17:43:33.377  INFO 7988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-06-16 17:43:33.447  INFO 7988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 1 JPA repository interfaces.
-2020-06-16 17:43:33.938  INFO 7988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-06-16 17:43:33.946  INFO 7988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-16 17:43:33.947  INFO 7988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-06-16 17:43:34.058  INFO 7988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-06-16 17:43:34.058  INFO 7988 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1379 ms
-2020-06-16 17:43:34.102  INFO 7988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-06-16 17:43:34.228  INFO 7988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-16 17:43:34.235  INFO 7988 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2020-06-16 17:43:34.345  INFO 7988 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-16 17:43:34.387  INFO 7988 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-06-16 17:43:34.435  WARN 7988 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-06-16 17:43:34.439  INFO 7988 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-06-16 17:43:34.699  INFO 7988 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-06-16 17:43:34.816  INFO 7988 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-06-16 17:43:34.852  INFO 7988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-06-16 17:43:34.854  INFO 7988 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-06-16 17:43:35.371  INFO 7988 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-06-16 17:43:35.378  INFO 7988 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-06-16 17:43:35.520  INFO 7988 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-06-16 17:43:35.528  INFO 7988 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 3.276 seconds (JVM running for 4.572)
-2020-06-16 17:45:20.892  INFO 13484 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 13484 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
-2020-06-16 17:45:20.896  INFO 13484 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
-2020-06-16 17:45:21.588  INFO 13484 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-06-16 17:45:21.643  INFO 13484 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 1 JPA repository interfaces.
-2020-06-16 17:45:22.084  INFO 13484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-06-16 17:45:22.093  INFO 13484 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-16 17:45:22.093  INFO 13484 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-06-16 17:45:22.198  INFO 13484 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-06-16 17:45:22.198  INFO 13484 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1259 ms
-2020-06-16 17:45:22.242  INFO 13484 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-06-16 17:45:22.369  INFO 13484 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-16 17:45:22.375  INFO 13484 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2020-06-16 17:45:22.494  INFO 13484 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-16 17:45:22.537  INFO 13484 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-06-16 17:45:22.583  WARN 13484 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-06-16 17:45:22.590  INFO 13484 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-06-16 17:45:22.795  INFO 13484 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-06-16 17:45:22.899  INFO 13484 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-06-16 17:45:22.930  INFO 13484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-06-16 17:45:22.932  INFO 13484 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-06-16 17:45:23.480  INFO 13484 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-06-16 17:45:23.488  INFO 13484 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-06-16 17:45:23.652  INFO 13484 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-06-16 17:45:23.660  INFO 13484 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 3.212 seconds (JVM running for 4.35)
-2020-06-16 17:56:37.939  INFO 10012 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 10012 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
-2020-06-16 17:56:37.941  INFO 10012 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
-2020-06-16 17:56:38.495  INFO 10012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-06-16 17:56:38.541  INFO 10012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 1 JPA repository interfaces.
-2020-06-16 17:56:38.931  INFO 10012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-06-16 17:56:38.940  INFO 10012 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-16 17:56:38.940  INFO 10012 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-06-16 17:56:39.042  INFO 10012 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-06-16 17:56:39.043  INFO 10012 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1070 ms
-2020-06-16 17:56:39.086  INFO 10012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-06-16 17:56:39.187  INFO 10012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-16 17:56:39.193  INFO 10012 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
-2020-06-16 17:56:39.330  INFO 10012 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-16 17:56:39.379  INFO 10012 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-06-16 17:56:39.433  WARN 10012 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-06-16 17:56:39.440  INFO 10012 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-06-16 17:56:39.717  INFO 10012 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-06-16 17:56:39.840  INFO 10012 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-06-16 17:56:39.861  INFO 10012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-06-16 17:56:39.863  INFO 10012 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-06-16 17:56:40.456  INFO 10012 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-06-16 17:56:40.464  INFO 10012 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-06-16 17:56:40.616  INFO 10012 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-06-16 17:56:40.628  INFO 10012 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 3.093 seconds (JVM running for 3.978)
-2020-06-16 17:56:50.840  INFO 10012 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-16 17:56:50.841  INFO 10012 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-16 17:56:50.846  INFO 10012 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2020-06-16 17:56:50.867  INFO 10012 --- [http-nio-8080-exec-2] com.hobby.digibooky.api.BookController   : Returned all books
+2020-06-17 08:36:09.740  INFO 2904 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 2904 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 08:36:09.749  INFO 2904 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 08:36:10.891  INFO 2904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 08:36:11.001  INFO 2904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 1 JPA repository interfaces.
+2020-06-17 08:36:11.738  INFO 2904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 08:36:11.751  INFO 2904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 08:36:11.752  INFO 2904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-17 08:36:12.637  INFO 2904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 08:36:12.637  INFO 2904 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2835 ms
+2020-06-17 08:36:12.693  INFO 2904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 08:36:12.853  INFO 2904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 08:36:12.863  INFO 2904 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 08:36:13.050  INFO 2904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 08:36:13.131  INFO 2904 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 08:36:13.218  WARN 2904 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 08:36:13.225  INFO 2904 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 08:36:13.570  INFO 2904 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 08:36:13.708  INFO 2904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 08:36:13.710  INFO 2904 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 08:36:13.748  INFO 2904 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 08:36:14.459  INFO 2904 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 08:36:14.467  INFO 2904 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 08:36:14.669  INFO 2904 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 08:36:14.677  INFO 2904 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 5.536 seconds (JVM running for 7.182)
+2020-06-17 08:36:40.242  INFO 2904 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 08:36:40.243  INFO 2904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 08:36:40.248  INFO 2904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-17 08:36:40.277  INFO 2904 --- [http-nio-8080-exec-1] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 08:43:19.323  INFO 3832 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 3832 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 08:43:19.326  INFO 3832 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 08:43:19.923  INFO 3832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 08:43:19.972  INFO 3832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 1 JPA repository interfaces.
+2020-06-17 08:43:20.356  INFO 3832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 08:43:20.364  INFO 3832 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 08:43:20.364  INFO 3832 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-17 08:43:20.453  INFO 3832 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 08:43:20.454  INFO 3832 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1091 ms
+2020-06-17 08:43:20.492  INFO 3832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 08:43:20.577  INFO 3832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 08:43:20.582  INFO 3832 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 08:43:20.688  INFO 3832 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 08:43:20.727  INFO 3832 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 08:43:20.770  INFO 3832 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 08:43:20.772  WARN 3832 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 08:43:20.963  INFO 3832 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 08:43:21.063  INFO 3832 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 08:43:21.123  INFO 3832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 08:43:21.125  INFO 3832 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 08:43:21.561  INFO 3832 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 08:43:21.567  INFO 3832 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 08:43:21.694  INFO 3832 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 08:43:21.700  INFO 3832 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 2.715 seconds (JVM running for 3.492)
+2020-06-17 08:43:36.826  INFO 3832 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 08:43:36.826  INFO 3832 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 08:43:36.832  INFO 3832 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-17 08:43:36.857  INFO 3832 --- [http-nio-8080-exec-2] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 08:44:17.316  INFO 9036 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 9036 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 08:44:17.318  INFO 9036 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 08:44:17.887  INFO 9036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 08:44:17.944  INFO 9036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 1 JPA repository interfaces.
+2020-06-17 08:44:18.300  INFO 9036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 08:44:18.306  INFO 9036 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 08:44:18.307  INFO 9036 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-17 08:44:18.389  INFO 9036 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 08:44:18.389  INFO 9036 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1035 ms
+2020-06-17 08:44:18.428  INFO 9036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 08:44:18.512  INFO 9036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 08:44:18.518  INFO 9036 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 08:44:18.622  INFO 9036 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 08:44:18.658  INFO 9036 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 08:44:18.700  WARN 9036 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 08:44:18.701  INFO 9036 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 08:44:18.907  INFO 9036 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 08:44:18.996  INFO 9036 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 08:44:19.030  INFO 9036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 08:44:19.032  INFO 9036 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 08:44:19.484  INFO 9036 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 08:44:19.490  INFO 9036 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 08:44:19.610  INFO 9036 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 08:44:19.617  INFO 9036 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 2.62 seconds (JVM running for 3.304)
+2020-06-17 08:46:33.307  INFO 6100 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 6100 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 08:46:33.310  INFO 6100 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 08:46:34.259  INFO 6100 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 08:46:34.335  INFO 6100 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 1 JPA repository interfaces.
+2020-06-17 08:46:34.870  INFO 6100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 08:46:34.880  INFO 6100 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 08:46:34.880  INFO 6100 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-17 08:46:35.714  INFO 6100 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 08:46:35.715  INFO 6100 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2359 ms
+2020-06-17 08:46:35.770  INFO 6100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 08:46:35.896  INFO 6100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 08:46:35.903  INFO 6100 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 08:46:36.048  INFO 6100 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 08:46:36.099  INFO 6100 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 08:46:36.152  INFO 6100 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 08:46:36.169  WARN 6100 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 08:46:36.427  INFO 6100 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 08:46:36.576  INFO 6100 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 08:46:36.686  INFO 6100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 08:46:36.688  INFO 6100 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 08:46:37.323  INFO 6100 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 08:46:37.331  INFO 6100 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 08:46:37.512  INFO 6100 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 08:46:37.524  INFO 6100 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 4.7 seconds (JVM running for 6.347)
+2020-06-17 08:47:10.201  INFO 6100 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 08:47:10.202  INFO 6100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 08:47:10.210  INFO 6100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-06-17 08:47:10.244  INFO 6100 --- [http-nio-8080-exec-1] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 08:49:15.483  INFO 6100 --- [http-nio-8080-exec-5] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 08:49:15.488 ERROR 6100 --- [http-nio-8080-exec-5] c.h.d.api.ControllerExceptionHandler     : Book with id: 5 does not exist
+2020-06-17 08:58:23.106  INFO 2492 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 2492 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 08:58:23.108  INFO 2492 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 08:58:23.663  INFO 2492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 08:58:23.708  INFO 2492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 1 JPA repository interfaces.
+2020-06-17 08:58:24.105  INFO 2492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 08:58:24.112  INFO 2492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 08:58:24.112  INFO 2492 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-17 08:58:24.199  INFO 2492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 08:58:24.199  INFO 2492 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1053 ms
+2020-06-17 08:58:24.237  INFO 2492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 08:58:24.341  INFO 2492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 08:58:24.350  INFO 2492 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 08:58:24.474  INFO 2492 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 08:58:24.514  INFO 2492 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 08:58:24.561  WARN 2492 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 08:58:24.562  INFO 2492 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 08:58:24.759  INFO 2492 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 08:58:24.856  INFO 2492 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 08:58:24.885  INFO 2492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 08:58:24.887  INFO 2492 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 08:58:25.359  INFO 2492 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 08:58:25.365  INFO 2492 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 08:58:25.488  INFO 2492 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 08:58:25.494  INFO 2492 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 2.717 seconds (JVM running for 3.459)
+2020-06-17 08:58:35.293  INFO 2492 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 08:58:35.294  INFO 2492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 08:58:35.300  INFO 2492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-17 08:58:35.328  INFO 2492 --- [http-nio-8080-exec-1] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 08:58:35.368 ERROR 2492 --- [http-nio-8080-exec-1] com.hobby.digibooky.api.BookController   : Book with id: 5 does not exist
+2020-06-17 08:58:59.505  INFO 11360 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 11360 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 08:58:59.507  INFO 11360 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 08:59:00.074  INFO 11360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 08:59:00.119  INFO 11360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 1 JPA repository interfaces.
+2020-06-17 08:59:00.473  INFO 11360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 08:59:00.481  INFO 11360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 08:59:00.481  INFO 11360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-17 08:59:00.565  INFO 11360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 08:59:00.566  INFO 11360 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1023 ms
+2020-06-17 08:59:00.600  INFO 11360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 08:59:00.683  INFO 11360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 08:59:00.689  INFO 11360 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 08:59:00.789  INFO 11360 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 08:59:00.825  INFO 11360 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 08:59:00.863  WARN 11360 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 08:59:00.865  INFO 11360 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 08:59:01.055  INFO 11360 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 08:59:01.151  INFO 11360 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 08:59:01.179  INFO 11360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 08:59:01.181  INFO 11360 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 08:59:01.625  INFO 11360 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 08:59:01.631  INFO 11360 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 08:59:01.755  INFO 11360 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 08:59:01.761  INFO 11360 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 2.628 seconds (JVM running for 3.499)
+2020-06-17 08:59:07.592  INFO 11360 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 08:59:07.594  INFO 11360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 08:59:07.601  INFO 11360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-17 08:59:07.625  INFO 11360 --- [http-nio-8080-exec-1] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 08:59:07.666 ERROR 11360 --- [http-nio-8080-exec-1] com.hobby.digibooky.api.BookController   : Book with id: 5 does not exist
+2020-06-17 08:59:56.318  INFO 8684 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 8684 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 08:59:56.320  INFO 8684 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 08:59:56.860  INFO 8684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 08:59:56.904  INFO 8684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 1 JPA repository interfaces.
+2020-06-17 08:59:57.257  INFO 8684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 08:59:57.264  INFO 8684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 08:59:57.264  INFO 8684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-17 08:59:57.348  INFO 8684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 08:59:57.349  INFO 8684 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 999 ms
+2020-06-17 08:59:57.386  INFO 8684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 08:59:57.471  INFO 8684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 08:59:57.479  INFO 8684 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 08:59:57.576  INFO 8684 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 08:59:57.611  INFO 8684 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 08:59:57.651  INFO 8684 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 08:59:57.653  WARN 8684 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 08:59:57.849  INFO 8684 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 08:59:57.943  INFO 8684 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 08:59:57.977  INFO 8684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 08:59:57.979  INFO 8684 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 08:59:58.424  INFO 8684 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 08:59:58.430  INFO 8684 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 08:59:58.554  INFO 8684 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 08:59:58.561  INFO 8684 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 2.579 seconds (JVM running for 3.724)
+2020-06-17 09:08:23.031  INFO 8684 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 09:08:23.032  INFO 8684 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 09:08:23.045  INFO 8684 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-06-17 09:08:23.075  INFO 8684 --- [http-nio-8080-exec-1] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:08:23.115 ERROR 8684 --- [http-nio-8080-exec-1] c.h.d.api.ControllerExceptionHandler     : Book with id: 5 does not exist
+2020-06-17 09:14:47.016  INFO 8684 --- [http-nio-8080-exec-3] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:14:47.018 ERROR 8684 --- [http-nio-8080-exec-3] c.h.d.api.ControllerExceptionHandler     : Book with id: 5 does not exist
+2020-06-17 09:15:27.446  INFO 8684 --- [http-nio-8080-exec-5] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:15:27.448 ERROR 8684 --- [http-nio-8080-exec-5] c.h.d.api.ControllerExceptionHandler     : Book with id: 5 does not exist
+2020-06-17 09:15:36.884  INFO 8684 --- [http-nio-8080-exec-7] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:15:36.886 ERROR 8684 --- [http-nio-8080-exec-7] c.h.d.api.ControllerExceptionHandler     : Book with id: 5 does not exist
+2020-06-17 09:18:35.259  INFO 10544 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 10544 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:18:35.262  INFO 10544 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 09:18:35.971  INFO 10544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 09:18:36.018  INFO 10544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40ms. Found 1 JPA repository interfaces.
+2020-06-17 09:18:36.408  INFO 10544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 09:18:36.424  INFO 10544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 09:18:36.424  INFO 10544 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-17 09:18:36.514  INFO 10544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 09:18:36.514  INFO 10544 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1214 ms
+2020-06-17 09:18:36.545  INFO 10544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 09:18:36.639  INFO 10544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 09:18:36.639  INFO 10544 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 09:18:36.749  INFO 10544 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:18:36.797  INFO 10544 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 09:18:36.831  INFO 10544 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 09:18:36.846  WARN 10544 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 09:18:37.049  INFO 10544 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 09:18:37.143  INFO 10544 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 09:18:37.190  INFO 10544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 09:18:37.190  INFO 10544 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 09:18:37.643  INFO 10544 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 09:18:37.643  INFO 10544 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 09:18:37.768  INFO 10544 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 09:18:37.768  INFO 10544 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 2.865 seconds (JVM running for 3.963)
+2020-06-17 09:18:42.427  INFO 10544 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 09:18:42.427  INFO 10544 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 09:18:42.434  INFO 10544 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-17 09:18:42.461  INFO 10544 --- [http-nio-8080-exec-2] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:18:42.513 ERROR 10544 --- [http-nio-8080-exec-2] c.h.d.api.ControllerExceptionHandler     : Book with id: 5 does not exist
+2020-06-17 09:20:46.181  INFO 5432 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 5432 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:20:46.181  INFO 5432 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 09:20:46.759  INFO 5432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 09:20:46.806  INFO 5432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 1 JPA repository interfaces.
+2020-06-17 09:20:47.151  INFO 5432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 09:20:47.167  INFO 5432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 09:20:47.167  INFO 5432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-17 09:20:47.245  INFO 5432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 09:20:47.245  INFO 5432 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1033 ms
+2020-06-17 09:20:47.292  INFO 5432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 09:20:47.370  INFO 5432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 09:20:47.370  INFO 5432 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 09:20:47.469  INFO 5432 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:20:47.516  INFO 5432 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 09:20:47.547  INFO 5432 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 09:20:47.547  WARN 5432 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 09:20:47.750  INFO 5432 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 09:20:47.844  INFO 5432 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 09:20:47.875  INFO 5432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 09:20:47.875  INFO 5432 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 09:20:48.484  INFO 5432 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 09:20:48.484  INFO 5432 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 09:20:48.625  INFO 5432 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 09:20:48.625  INFO 5432 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 2.812 seconds (JVM running for 3.484)
+2020-06-17 09:20:52.056  INFO 5432 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 09:20:52.056  INFO 5432 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 09:20:52.062  INFO 5432 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-17 09:20:52.088  INFO 5432 --- [http-nio-8080-exec-1] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:20:52.130 ERROR 5432 --- [http-nio-8080-exec-1] c.h.d.api.ControllerExceptionHandler     : Book with id: 5 does not exist
+2020-06-17 09:21:02.851  INFO 5432 --- [http-nio-8080-exec-3] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:21:02.853 ERROR 5432 --- [http-nio-8080-exec-3] c.h.d.api.ControllerExceptionHandler     : Book with id: 5 does not exist
+2020-06-17 09:24:53.187  INFO 11360 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 11360 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:24:53.187  INFO 11360 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 09:24:53.796  INFO 11360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 09:24:53.843  INFO 11360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 1 JPA repository interfaces.
+2020-06-17 09:24:54.189  INFO 11360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 09:24:54.205  INFO 11360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 09:24:54.205  INFO 11360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-17 09:24:54.283  INFO 11360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 09:24:54.283  INFO 11360 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1065 ms
+2020-06-17 09:24:54.314  INFO 11360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 09:24:54.408  INFO 11360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 09:24:54.408  INFO 11360 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 09:24:54.502  INFO 11360 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:24:54.548  INFO 11360 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 09:24:54.580  INFO 11360 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 09:24:54.595  WARN 11360 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 09:24:54.783  INFO 11360 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 09:24:54.861  INFO 11360 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 09:24:54.908  INFO 11360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 09:24:54.908  INFO 11360 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 09:24:55.345  INFO 11360 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 09:24:55.345  INFO 11360 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 09:24:55.470  INFO 11360 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 09:24:55.486  INFO 11360 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 2.662 seconds (JVM running for 3.453)
+2020-06-17 09:25:06.703  INFO 11360 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 09:25:06.703  INFO 11360 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 09:25:06.709  INFO 11360 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-17 09:25:06.732  INFO 11360 --- [http-nio-8080-exec-2] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:25:06.773 ERROR 11360 --- [http-nio-8080-exec-2] c.h.d.api.ControllerExceptionHandler     : Book with id: 5 does not exist
+2020-06-17 09:27:37.586  INFO 11360 --- [http-nio-8080-exec-3] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:27:37.588 ERROR 11360 --- [http-nio-8080-exec-3] c.h.d.api.ControllerExceptionHandler     : Book with id: 5 does not exist
+2020-06-17 09:32:02.602  INFO 10768 --- [main] c.hobby.digibooky.DigibookyApplication   : Starting DigibookyApplication on WS501945 with PID 10768 (C:\_hobby-projects\digibooky\build\classes\java\main started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:32:02.604  INFO 10768 --- [main] c.hobby.digibooky.DigibookyApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 09:32:03.324  INFO 10768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 09:32:03.376  INFO 10768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 1 JPA repository interfaces.
+2020-06-17 09:32:03.763  INFO 10768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 09:32:03.763  INFO 10768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 09:32:03.763  INFO 10768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-17 09:32:03.857  INFO 10768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 09:32:03.857  INFO 10768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1213 ms
+2020-06-17 09:32:03.888  INFO 10768 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 09:32:03.982  INFO 10768 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 09:32:03.982  INFO 10768 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 09:32:04.091  INFO 10768 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:32:04.146  INFO 10768 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 09:32:04.193  INFO 10768 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 09:32:04.193  WARN 10768 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 09:32:04.428  INFO 10768 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 09:32:04.553  INFO 10768 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 09:32:04.599  INFO 10768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 09:32:04.599  INFO 10768 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 09:32:05.150  INFO 10768 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 09:32:05.157  INFO 10768 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 09:32:05.288  INFO 10768 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 09:32:05.296  INFO 10768 --- [main] c.hobby.digibooky.DigibookyApplication   : Started DigibookyApplication in 3.061 seconds (JVM running for 4.163)
+2020-06-17 09:32:10.119  INFO 10768 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 09:32:10.120  INFO 10768 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 09:32:10.125  INFO 10768 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-17 09:32:10.152  INFO 10768 --- [http-nio-8080-exec-2] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:32:10.192 ERROR 10768 --- [http-nio-8080-exec-2] c.h.d.api.ControllerExceptionHandler     : Book with id: 5 does not exist
+2020-06-17 09:32:13.657  INFO 10768 --- [http-nio-8080-exec-4] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:32:17.463  INFO 10768 --- [http-nio-8080-exec-5] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:32:24.586  INFO 10768 --- [http-nio-8080-exec-6] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:32:24.588 ERROR 10768 --- [http-nio-8080-exec-6] c.h.d.api.ControllerExceptionHandler     : Book with id: 10 does not exist
+2020-06-17 09:32:28.356  INFO 10768 --- [http-nio-8080-exec-8] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:32:32.374  INFO 10768 --- [http-nio-8080-exec-9] com.hobby.digibooky.api.BookController   : Returned all books
+2020-06-17 09:32:48.638  INFO 3756 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Starting BookControllerTest on WS501945 with PID 3756 (started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:32:48.638  INFO 3756 --- [Test worker] c.h.digibooky.api.BookControllerTest     : No active profile set, falling back to default profiles: default
+2020-06-17 09:32:49.937  INFO 3756 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:32:50.187  INFO 3756 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-06-17 09:32:50.187  INFO 3756 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-17 09:32:50.203  INFO 3756 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 16 ms
+2020-06-17 09:32:50.236  INFO 3756 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Started BookControllerTest in 1.95 seconds (JVM running for 3.291)
+2020-06-17 09:32:50.310  INFO 3756 --- [Test worker] com.hobby.digibooky.api.BookController   : Returned all books
+2020-06-17 09:32:50.419  INFO 3756 --- [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hobby.digibooky.DigibookyApplicationTests], using SpringBootContextLoader
+2020-06-17 09:32:50.419  INFO 3756 --- [Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.hobby.digibooky.DigibookyApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-17 09:32:50.419  INFO 3756 --- [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hobby.digibooky.DigibookyApplicationTests]: DigibookyApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-06-17 09:32:50.435  INFO 3756 --- [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hobby.digibooky.DigibookyApplication for test class com.hobby.digibooky.DigibookyApplicationTests
+2020-06-17 09:32:50.435  INFO 3756 --- [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-06-17 09:32:50.435  INFO 3756 --- [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@66884190, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@44082e9e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@59678192, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@120e3419, org.springframework.test.context.support.DirtiesContextTestExecutionListener@362e7309, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3357c78c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@56d9ab65, org.springframework.test.context.event.EventPublishingTestExecutionListener@3514f35b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@706778cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7d01aaec, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6618b4aa, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@74041d19, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3f6e8272, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4fc819b9]
+2020-06-17 09:32:50.482  INFO 3756 --- [Test worker] c.h.digibooky.DigibookyApplicationTests  : Starting DigibookyApplicationTests on WS501945 with PID 3756 (started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:32:50.482  INFO 3756 --- [Test worker] c.h.digibooky.DigibookyApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-17 09:32:50.810  INFO 3756 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 09:32:50.888  INFO 3756 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 1 JPA repository interfaces.
+2020-06-17 09:32:51.263  INFO 3756 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:32:51.263  INFO 3756 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 09:32:51.482  INFO 3756 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 09:32:51.560  INFO 3756 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 09:32:51.638  INFO 3756 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-06-17 09:32:51.716  INFO 3756 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 09:32:51.810  WARN 3756 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 09:32:51.966  INFO 3756 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 09:32:52.326  INFO 3756 --- [Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 09:32:52.435  INFO 3756 --- [Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories�
+2020-06-17 09:32:52.888  INFO 3756 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 09:32:52.888  INFO 3756 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 09:32:53.388  INFO 3756 --- [Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 09:32:53.388  INFO 3756 --- [Test worker] c.h.digibooky.DigibookyApplicationTests  : Started DigibookyApplicationTests in 2.954 seconds (JVM running for 6.456)
+2020-06-17 09:32:53.404  INFO 3756 --- [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hobby.digibooky.services.BookServiceTest], using SpringBootContextLoader
+2020-06-17 09:32:53.404  INFO 3756 --- [Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.hobby.digibooky.services.BookServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-17 09:32:53.404  INFO 3756 --- [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hobby.digibooky.services.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-06-17 09:32:53.420  INFO 3756 --- [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hobby.digibooky.DigibookyApplication for test class com.hobby.digibooky.services.BookServiceTest
+2020-06-17 09:32:53.420  INFO 3756 --- [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-06-17 09:32:53.435  INFO 3756 --- [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@73705b3e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@23ad7200, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@168802d8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5d751ab8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2c2d1383, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64584974, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@321009e5, org.springframework.test.context.event.EventPublishingTestExecutionListener@474575c5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@330d7a5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@25052d5e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@17e8573a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7beff35f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7ee78e78, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72842327]
+2020-06-17 09:32:53.482  INFO 3756 --- [Test worker] c.h.digibooky.services.BookServiceTest   : Starting BookServiceTest on WS501945 with PID 3756 (started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:32:53.482  INFO 3756 --- [Test worker] c.h.digibooky.services.BookServiceTest   : No active profile set, falling back to default profiles: default
+2020-06-17 09:32:53.810  INFO 3756 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 09:32:53.841  INFO 3756 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 1 JPA repository interfaces.
+2020-06-17 09:32:54.123  INFO 3756 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:32:54.123  INFO 3756 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-06-17 09:32:54.123  INFO 3756 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-06-17 09:32:54.154  INFO 3756 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 09:32:54.169  INFO 3756 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-17 09:32:54.232  INFO 3756 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 09:32:54.232  INFO 3756 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 09:32:54.311  WARN 3756 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 09:32:54.670  INFO 3756 --- [Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2020-06-17 09:32:54.748  INFO 3756 --- [Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories�
+2020-06-17 09:32:54.748  INFO 3756 --- [Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 09:32:54.748  INFO 3756 --- [Test worker] c.h.digibooky.services.BookServiceTest   : Started BookServiceTest in 1.32 seconds (JVM running for 7.817)
+2020-06-17 09:32:54.967  INFO 3756 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:32:54.967  INFO 3756 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 09:32:54.967  INFO 3756 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-06-17 09:32:54.967  INFO 3756 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 09:32:54.967  INFO 3756 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-06-17 09:32:54.983  WARN 3756 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2020-06-17 09:32:54.983 ERROR 3756 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-06-17 09:32:54.983  INFO 3756 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:32:54.983  INFO 3756 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-17 09:32:54.983  WARN 3756 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2020-06-17 09:32:54.983 ERROR 3756 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-06-17 09:32:54.983  WARN 3756 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2020-06-17 09:32:54.983  INFO 3756 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:32:54.983  INFO 3756 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-06-17 09:32:54.983  INFO 3756 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-17 09:32:54.983  INFO 3756 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-06-17 09:41:48.796  INFO 1788 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Starting BookControllerTest on WS501945 with PID 1788 (started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:41:48.798  INFO 1788 --- [Test worker] c.h.digibooky.api.BookControllerTest     : No active profile set, falling back to default profiles: default
+2020-06-17 09:41:50.178  INFO 1788 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:41:50.439  INFO 1788 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-06-17 09:41:50.440  INFO 1788 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-17 09:41:50.457  INFO 1788 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 17 ms
+2020-06-17 09:41:50.495  INFO 1788 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Started BookControllerTest in 2.063 seconds (JVM running for 3.392)
+2020-06-17 09:41:50.603  INFO 1788 --- [Test worker] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:41:50.701  INFO 1788 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:42:03.353  INFO 12948 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Starting BookControllerTest on WS501945 with PID 12948 (started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:42:03.356  INFO 12948 --- [Test worker] c.h.digibooky.api.BookControllerTest     : No active profile set, falling back to default profiles: default
+2020-06-17 09:42:04.675  INFO 12948 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:42:04.944  INFO 12948 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-06-17 09:42:04.945  INFO 12948 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-17 09:42:04.959  INFO 12948 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 14 ms
+2020-06-17 09:42:04.985  INFO 12948 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Started BookControllerTest in 2.002 seconds (JVM running for 3.255)
+2020-06-17 09:42:05.077  INFO 12948 --- [Test worker] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:42:05.187  INFO 12948 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:45:06.463  INFO 11616 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Starting BookControllerTest on WS501945 with PID 11616 (started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:45:06.466  INFO 11616 --- [Test worker] c.h.digibooky.api.BookControllerTest     : No active profile set, falling back to default profiles: default
+2020-06-17 09:45:07.778  INFO 11616 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:45:08.053  INFO 11616 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-06-17 09:45:08.053  INFO 11616 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-17 09:45:08.065  INFO 11616 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 11 ms
+2020-06-17 09:45:08.090  INFO 11616 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Started BookControllerTest in 2.002 seconds (JVM running for 3.26)
+2020-06-17 09:45:08.176  INFO 11616 --- [Test worker] com.hobby.digibooky.api.BookController   : Returned all books
+2020-06-17 09:45:08.285  INFO 11616 --- [Test worker] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:45:08.303  INFO 11616 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:56:46.339  INFO 8516 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Starting BookControllerTest on WS501945 with PID 8516 (started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:56:46.355  INFO 8516 --- [Test worker] c.h.digibooky.api.BookControllerTest     : No active profile set, falling back to default profiles: default
+2020-06-17 09:56:48.087  INFO 8516 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:56:48.353  INFO 8516 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-06-17 09:56:48.353  INFO 8516 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-17 09:56:48.368  INFO 8516 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 15 ms
+2020-06-17 09:56:48.400  INFO 8516 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Started BookControllerTest in 2.46 seconds (JVM running for 3.961)
+2020-06-17 09:56:48.462  INFO 8516 --- [Test worker] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:56:48.478 ERROR 8516 --- [Test worker] c.h.d.api.ControllerExceptionHandler     : null
+2020-06-17 09:56:48.509  INFO 8516 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:56:59.697  INFO 10468 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Starting BookControllerTest on WS501945 with PID 10468 (started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 09:56:59.700  INFO 10468 --- [Test worker] c.h.digibooky.api.BookControllerTest     : No active profile set, falling back to default profiles: default
+2020-06-17 09:57:01.013  INFO 10468 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 09:57:01.278  INFO 10468 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-06-17 09:57:01.279  INFO 10468 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-17 09:57:01.291  INFO 10468 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 11 ms
+2020-06-17 09:57:01.317  INFO 10468 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Started BookControllerTest in 1.987 seconds (JVM running for 3.279)
+2020-06-17 09:57:01.407  INFO 10468 --- [Test worker] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 09:57:01.412 ERROR 10468 --- [Test worker] c.h.d.api.ControllerExceptionHandler     : null
+2020-06-17 09:57:01.461  INFO 10468 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 10:05:07.302  INFO 3460 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Starting BookControllerTest on WS501945 with PID 3460 (started by svb2xnc in C:\_hobby-projects\digibooky)
+2020-06-17 10:05:07.318  INFO 3460 --- [Test worker] c.h.digibooky.api.BookControllerTest     : No active profile set, falling back to default profiles: default
+2020-06-17 10:05:08.868  INFO 3460 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 10:05:09.164  INFO 3460 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-06-17 10:05:09.164  INFO 3460 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-17 10:05:09.164  INFO 3460 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2020-06-17 10:05:09.195  INFO 3460 --- [Test worker] c.h.digibooky.api.BookControllerTest     : Started BookControllerTest in 2.269 seconds (JVM running for 3.741)
+2020-06-17 10:05:09.273  INFO 3460 --- [Test worker] com.hobby.digibooky.api.BookController   : Returned all books
+2020-06-17 10:05:09.382  INFO 3460 --- [Test worker] com.hobby.digibooky.api.BookController   : Returned book
+2020-06-17 10:05:09.398  INFO 3460 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
