@@ -1,6 +1,5 @@
 package com.hobby.digibooky.services;
 
-import com.hobby.digibooky.domain.Member;
 import com.hobby.digibooky.domain.exceptions.EmailNotUnique;
 import com.hobby.digibooky.domain.exceptions.InnsNotUniqueException;
 import com.hobby.digibooky.dtos.CreateMemberDto;
