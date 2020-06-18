@@ -5,6 +5,8 @@ import com.hobby.digibooky.dtos.AuthorDto;
 
 public class AuthorMapper {
 
+    private AuthorMapper(){}
+
     public static AuthorDto toDto(Author author){
         return new AuthorDto(
                 author.getId(),

@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 
 public class BookMapper {
 
+    private BookMapper(){}
+
     public static BookDto toDto(Book book){
         return new BookDto(
                 book.getId(),

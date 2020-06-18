@@ -26,43 +26,23 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    public List<BookDto> getAllBooks(String isbn, String title, String firstName, String lastName) {
-        List<Book> books = Lists.newArrayList(bookRepository.findAll());
+    public List<BookDto> getAllBooks(String isbn, String title, String firstName, String lastName){
         if (isbn != null) {
-            return BookMapper.toDto(books
-                    .stream()
-                    .filter(book -> Pattern.matches(isbn, book.getIsbn().getIsbnNumber()))
-                    .collect(Collectors.toList()));
+            return getBookByIsbn(isbn);
         }
         if(title != null){
-            return BookMapper.toDto(books
-                    .stream()
-                    .filter(book -> Pattern.matches(title.toLowerCase().trim(), book.getTitle().toLowerCase().trim()))
-                    .collect(Collectors.toList()));
+            return getBookByTitle(title);
         }
         if(firstName != null && lastName != null){
-            String fullName = firstName.concat(lastName).toLowerCase().trim();
-            return BookMapper.toDto(books
-                    .stream()
-                    .filter(book -> Pattern.matches(fullName,
-                            book.getAuthor().getFirstName().concat(book.getAuthor().getLastName()).toLowerCase().trim()))
-                    .collect(Collectors.toList()));
+            return getBookByAuthorFullName(firstName, lastName);
         }
         if(firstName != null){
-            return BookMapper.toDto(books
-                    .stream()
-                    .filter(book -> Pattern.matches(firstName.toLowerCase().trim(),
-                            book.getAuthor().getFirstName().toLowerCase().trim()))
-                    .collect(Collectors.toList()));
+            return getBookByAuthorFirstName(firstName);
         }
         if(lastName != null){
-            return BookMapper.toDto(books
-                    .stream()
-                    .filter(book -> Pattern.matches(lastName.toLowerCase().trim(),
-                            book.getAuthor().getLastName().toLowerCase().trim()))
-                    .collect(Collectors.toList()));
+            return getBookByAuthorLastName(lastName);
         }
-        return BookMapper.toDto(books);
+        return BookMapper.toDto((List<Book>) bookRepository.findAll());
     }
 
     public BookDto getBookById(Long bookId) {
@@ -71,5 +51,49 @@ public class BookService {
             throw new BookNotFoundException(bookId);
         }
         return BookMapper.toDto(book.get());
+    }
+
+    private List<BookDto> getBookByAuthorLastName(String lastName) {
+        List<Book> books = Lists.newArrayList(bookRepository.findAll());
+        return BookMapper.toDto(books
+                .stream()
+                .filter(book -> Pattern.matches(lastName.toLowerCase().trim(),
+                        book.getAuthor().getLastName().toLowerCase().trim()))
+                .collect(Collectors.toList()));
+    }
+
+    private List<BookDto> getBookByAuthorFirstName(String firstName) {
+        List<Book> books = Lists.newArrayList(bookRepository.findAll());
+        return BookMapper.toDto(books
+                .stream()
+                .filter(book -> Pattern.matches(firstName.toLowerCase().trim(),
+                        book.getAuthor().getFirstName().toLowerCase().trim()))
+                .collect(Collectors.toList()));
+    }
+
+    private List<BookDto> getBookByAuthorFullName(String firstName, String lastName) {
+        List<Book> books = Lists.newArrayList(bookRepository.findAll());
+        String fullName = firstName.concat(lastName).toLowerCase().trim();
+        return BookMapper.toDto(books
+                .stream()
+                .filter(book -> Pattern.matches(fullName,
+                        book.getAuthor().getFirstName().concat(book.getAuthor().getLastName()).toLowerCase().trim()))
+                .collect(Collectors.toList()));
+    }
+
+    private List<BookDto> getBookByTitle(String title) {
+        List<Book> books = Lists.newArrayList(bookRepository.findAll());
+        return BookMapper.toDto(books
+                .stream()
+                .filter(book -> Pattern.matches(title.toLowerCase().trim(), book.getTitle().toLowerCase().trim()))
+                .collect(Collectors.toList()));
+    }
+
+    private List<BookDto> getBookByIsbn(String isbn) {
+        List<Book> books = Lists.newArrayList(bookRepository.findAll());
+        return BookMapper.toDto(books
+                .stream()
+                .filter(book -> Pattern.matches(isbn, book.getIsbn().getIsbnNumber()))
+                .collect(Collectors.toList()));
     }
 }
