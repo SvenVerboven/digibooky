@@ -54,4 +54,12 @@ public class CreateMemberDto {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 }

@@ -51,21 +51,9 @@ class MemberServiceTest {
     }
 
     @Test
-    void saveMember_givenNoInns_thenThrowIllegalArgumentThrowException() {
-        createMemberDto.setInns(null);
-        Assertions.assertThatThrownBy(()-> memberService.saveMember(createMemberDto)).isInstanceOf(IllegalArgumentException.class);
-    }
-
-    @Test
     void saveMember_givenNotUniqueInns_thenThrowInnsNotUniqueException() {
         Mockito.when(memberRepository.findByInns(member.getInns())).thenReturn(member);
         Assertions.assertThatThrownBy(()-> memberService.saveMember(createMemberDto)).isInstanceOf(InnsNotUniqueException.class);
-    }
-
-    @Test
-    void saveMember_givenNoEmail_thenThrowIllegalArgumentException() {
-        createMemberDto.setEmail(null);
-        Assertions.assertThatThrownBy(()-> memberService.saveMember(createMemberDto)).isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
