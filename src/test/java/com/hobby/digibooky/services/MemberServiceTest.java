@@ -2,7 +2,7 @@ package com.hobby.digibooky.services;
 
 import com.hobby.digibooky.domain.Address;
 import com.hobby.digibooky.domain.Member;
-import com.hobby.digibooky.domain.exceptions.EmailNotUnique;
+import com.hobby.digibooky.domain.exceptions.EmailNotUniqueException;
 import com.hobby.digibooky.domain.exceptions.InnsNotUniqueException;
 import com.hobby.digibooky.dtos.CreateMemberDto;
 import com.hobby.digibooky.dtos.MemberDto;
@@ -71,6 +71,6 @@ class MemberServiceTest {
     @Test
     void saveMember_givenNotUniqueEmail_thenThrowEmailNotUniqueException() {
         Mockito.when(memberRepository.findByEmail(Mockito.anyString())).thenReturn(member);
-        Assertions.assertThatThrownBy(()-> memberService.saveMember(createMemberDto)).isInstanceOf(EmailNotUnique.class);
+        Assertions.assertThatThrownBy(()-> memberService.saveMember(createMemberDto)).isInstanceOf(EmailNotUniqueException.class);
     }
 }

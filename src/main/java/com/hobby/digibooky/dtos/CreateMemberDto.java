@@ -2,12 +2,21 @@ package com.hobby.digibooky.dtos;
 
 import com.hobby.digibooky.domain.Address;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+
 public class CreateMemberDto {
 
+    @NotEmpty(message = "Inns number must not be empty")
     private String inns;
     private String firstName;
+    @NotEmpty(message = "Last name must not be empty")
     private String lastName;
+    @NotEmpty(message = "Email must not be empty")
+    @Pattern(regexp = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$", message = "Email is not valid")
     private String email;
+    @Valid
     private Address address;
 
     public CreateMemberDto(String inns, String firstName, String lastName, String email, Address address) {

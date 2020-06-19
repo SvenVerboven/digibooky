@@ -1,6 +1,7 @@
 package com.hobby.digibooky.domain;
 
 import javax.persistence.Embeddable;
+import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
 
 @Embeddable
@@ -9,6 +10,7 @@ public class Address {
     private String streetName;
     private String houseNumber;
     private String postalCode;
+    @NotEmpty(message = "City must not be empty")
     private String city;
 
     public Address(String streetName, String houseNumber, String postalCode, String city) {
@@ -19,6 +21,38 @@ public class Address {
     }
 
     public Address(){}
+
+    public String getStreetName() {
+        return streetName;
+    }
+
+    public String getHouseNumber() {
+        return houseNumber;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
+    public void setHouseNumber(String houseNumber) {
+        this.houseNumber = houseNumber;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     @Override
     public boolean equals(Object o) {

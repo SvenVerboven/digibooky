@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping(path = "/books")
 public class BookController {
 
-    private final Logger logger = LoggerFactory.getLogger(BookController.class);
+    private final Logger bookControllerLogger = LoggerFactory.getLogger(BookController.class);
     private BookService bookService;
 
     @Autowired
@@ -32,7 +32,7 @@ public class BookController {
                                      @RequestParam(required = false) String title,
                                      @RequestParam(required = false) String firstName,
                                      @RequestParam(required = false) String lastName) {
-        logger.info("Returned all books");
+        bookControllerLogger.info("Returned all books");
         return bookService.getAllBooks(isbn, title, firstName, lastName);
     }
 
@@ -40,7 +40,7 @@ public class BookController {
     @ResponseStatus(HttpStatus.OK)
     @JsonView(Views.BookDetail.class)
     public BookDto getBookById(@PathVariable Long bookId) {
-        logger.info("Returned book");
+        bookControllerLogger.info("Returned book");
         return bookService.getBookById(bookId);
     }
 }

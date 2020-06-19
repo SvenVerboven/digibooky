@@ -1,7 +1,7 @@
 package com.hobby.digibooky.domain.exceptions;
 
-public class EmailNotUnique extends RuntimeException {
-    public EmailNotUnique(String email){
+public class EmailNotUniqueException extends RuntimeException {
+    public EmailNotUniqueException(String email){
         super(String.format("Email: %s is not unique", email));
     }
 }

@@ -1,6 +1,6 @@
 package com.hobby.digibooky.services;
 
-import com.hobby.digibooky.domain.exceptions.EmailNotUnique;
+import com.hobby.digibooky.domain.exceptions.EmailNotUniqueException;
 import com.hobby.digibooky.domain.exceptions.InnsNotUniqueException;
 import com.hobby.digibooky.dtos.CreateMemberDto;
 import com.hobby.digibooky.dtos.MemberDto;
@@ -32,18 +32,12 @@ public class MemberService {
     }
 
     private void validateEmail(String email) {
-        if(email == null){
-            throw new IllegalArgumentException("Email must not be null");
-        }
         if(memberRepository.findByEmail(email) != null){
-            throw new EmailNotUnique(email);
+            throw new EmailNotUniqueException(email);
         }
     }
 
     private void validateInns(String inns) {
-        if(inns == null){
-            throw new IllegalArgumentException("Inns must not be null");
-        }
         if(memberRepository.findByInns(inns) != null){
             throw new InnsNotUniqueException(inns);
         }
