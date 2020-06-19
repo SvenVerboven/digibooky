@@ -14,3 +14,9 @@ VALUES
 (3, false, false, '9794523654896', 'java programming', 'Java: A Beginner''s Guide, Seventh Edition', 2),
 (4, false, false, '9794856214578', 'spring framework', 'Spring: Microservices with Spring Boot', 3)
 ;
+
+INSERT INTO member
+(ID, INNS, FIRST_NAME, LAST_NAME, EMAIL, STREET_NAME, HOUSE_NUMBER, POSTAL_CODE, CITY)
+VALUES
+(1, '123456789', 'John','Doe','john@gmail.com','lowstreet','15','3295','Brussel'),
+(2, '987654321', 'Marina','Wally','marina@gmail.com','highstreet','26','3295','Brussel');

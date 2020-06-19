@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import com.hobby.digibooky.domain.Book;
 import com.hobby.digibooky.domain.exceptions.BookNotFoundException;
 import com.hobby.digibooky.dtos.BookDto;
+import com.hobby.digibooky.dtos.CreateBookDto;
 import com.hobby.digibooky.infrastructure.BookRepository;
 import com.hobby.digibooky.mappers.BookMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,6 +52,10 @@ public class BookService {
             throw new BookNotFoundException(bookId);
         }
         return BookMapper.toDto(book.get());
+    }
+
+    public BookDto saveBook(CreateBookDto createBookDto){
+        return BookMapper.toDto(bookRepository.save(BookMapper.toBook(createBookDto)));
     }
 
     private List<BookDto> getBookByAuthorLastName(String lastName) {

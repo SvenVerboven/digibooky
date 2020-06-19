@@ -1,14 +1,12 @@
 package com.hobby.digibooky.domain;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Member {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String inns;
     private String firstName;

@@ -5,6 +5,7 @@ import com.hobby.digibooky.domain.Book;
 import com.hobby.digibooky.domain.Isbn;
 import com.hobby.digibooky.domain.exceptions.BookNotFoundException;
 import com.hobby.digibooky.dtos.BookDto;
+import com.hobby.digibooky.dtos.CreateBookDto;
 import com.hobby.digibooky.infrastructure.BookRepository;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
@@ -49,7 +50,7 @@ class BookServiceTest {
     }
 
     @Test
-    void getAllBooks_givenTwoBooks_thenReturnTwoBooks() {
+    void getAllBooks_givenTwoBooks_thenReturnsTwoBooks() {
         Mockito.when(bookRepository.findAll()).thenReturn(Lists.newArrayList(book1, book2));
 
         List<BookDto> books = bookService.getAllBooks(emptyBookIsbn, emptyBookTitle, emptyFirstName, emptyLastName);
@@ -60,7 +61,7 @@ class BookServiceTest {
 
 
     @Test
-    void getAllBooks_givenFullIsbnWhichMatchesOneBook_thenReturnOneBook() {
+    void getAllBooks_givenFullIsbnWhichMatchesOneBook_thenReturnsOneBook() {
         Mockito.when(bookRepository.findAll()).thenReturn(Lists.newArrayList(book1, book2));
 
         List<BookDto> books = bookService.getAllBooks(book1.getIsbn().getIsbnNumber(), emptyBookTitle, emptyFirstName, emptyLastName);
@@ -68,7 +69,7 @@ class BookServiceTest {
     }
 
     @Test
-    void getAllBooks_givenIsbnWithWildcardsWhichMatchesOneBook_thenReturnOneBook() {
+    void getAllBooks_givenIsbnWithWildcardsWhichMatchesOneBook_thenReturnsOneBook() {
         Mockito.when(bookRepository.findAll()).thenReturn(Lists.newArrayList(book1, book2));
 
         List<BookDto> books = bookService.getAllBooks("978.23456.*", emptyBookTitle, emptyFirstName, emptyLastName);
@@ -76,7 +77,7 @@ class BookServiceTest {
     }
 
     @Test
-    void getAllBooks_givenTitleWhichMatchesOneBook_thenReturnOneBook() {
+    void getAllBooks_givenTitleWhichMatchesOneBook_thenReturnsOneBook() {
         Mockito.when(bookRepository.findAll()).thenReturn(Lists.newArrayList(book1, book2));
 
         List<BookDto> books = bookService.getAllBooks(emptyBookIsbn, book1.getTitle(), emptyFirstName, emptyLastName);
@@ -92,7 +93,7 @@ class BookServiceTest {
     }
 
     @Test
-    void getBookById_givenBookId_thenReturnBook() {
+    void getBookById_givenValidInput_thenReturnsBook() {
         Mockito.when(bookRepository.findById(book1.getId())).thenReturn(Optional.of(book1));
 
         BookDto bookDto = bookService.getBookById(book1.getId());
@@ -107,5 +108,13 @@ class BookServiceTest {
         Mockito.when(bookRepository.findById(book1.getId())).thenReturn(Optional.empty());
 
         Assertions.assertThatThrownBy(() -> bookService.getBookById(book2.getId())).isInstanceOf(BookNotFoundException.class);
+    }
+
+    @Test
+    void saveBook_givenValidInput_thenReturnsBookDto() {
+        Mockito.when(bookRepository.save(Mockito.any(Book.class))).thenReturn(book1);
+
+        BookDto savedBook = bookService.saveBook(Mockito.mock(CreateBookDto.class));
+        Assertions.assertThat(savedBook).isNotNull();
     }
 }

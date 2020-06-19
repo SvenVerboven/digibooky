@@ -1,13 +1,16 @@
 package com.hobby.digibooky.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Author {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstName;
+    @NotEmpty(message = "Author's last name must not be empty")
     private String lastName;
 
     public Author() {
@@ -28,5 +31,9 @@ public class Author {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

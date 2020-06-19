@@ -2,6 +2,7 @@ package com.hobby.digibooky.api;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.hobby.digibooky.dtos.BookDto;
+import com.hobby.digibooky.dtos.CreateBookDto;
 import com.hobby.digibooky.services.BookService;
 import com.hobby.digibooky.services.Views;
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -42,5 +44,12 @@ public class BookController {
     public BookDto getBookById(@PathVariable Long bookId) {
         bookControllerLogger.info("Returned book");
         return bookService.getBookById(bookId);
+    }
+
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.CREATED)
+    public BookDto saveBook(@Valid @RequestBody CreateBookDto createBookDto){
+        bookControllerLogger.info("Saved book");
+        return bookService.saveBook(createBookDto);
     }
 }

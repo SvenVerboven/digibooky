@@ -6,6 +6,7 @@ import javax.persistence.*;
 public class Book {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Embedded
     private Isbn isbn;
@@ -13,7 +14,7 @@ public class Book {
     private String summary;
     private boolean deleted;
     private boolean borrowed;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "AUTHOR_ID")
     private Author author;
 
