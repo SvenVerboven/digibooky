@@ -3,9 +3,12 @@ package com.hobby.digibooky.services;
 import com.hobby.digibooky.domain.Author;
 import com.hobby.digibooky.domain.Book;
 import com.hobby.digibooky.domain.Isbn;
+import com.hobby.digibooky.domain.exceptions.AuthorNotFoundException;
 import com.hobby.digibooky.domain.exceptions.BookNotFoundException;
 import com.hobby.digibooky.dtos.BookDto;
 import com.hobby.digibooky.dtos.CreateBookDto;
+import com.hobby.digibooky.dtos.UpdateBookDto;
+import com.hobby.digibooky.infrastructure.AuthorRepository;
 import com.hobby.digibooky.infrastructure.BookRepository;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
@@ -24,11 +27,14 @@ class BookServiceTest {
 
     @MockBean
     private BookRepository bookRepository;
+    @MockBean
+    private AuthorRepository authorRepository;
     @Autowired
     private BookService bookService;
     private Author author1;
     private Book book1;
     private Book book2;
+    private UpdateBookDto updateBookDto;
     private String emptyBookTitle = null;
     private String emptyBookIsbn = null;
     private String emptyFirstName = null;
@@ -46,6 +52,9 @@ class BookServiceTest {
                 new Isbn("9782123456803"),
                 "Harry Potter and the Chamber of Secrets's",
                 "the second book",
+                author1);
+        updateBookDto = new UpdateBookDto("Harry Potter and the Philosopher",
+                "the first book",
                 author1);
     }
 
@@ -116,5 +125,50 @@ class BookServiceTest {
 
         BookDto savedBook = bookService.saveBook(Mockito.mock(CreateBookDto.class));
         Assertions.assertThat(savedBook).isNotNull();
+    }
+
+    @Test
+    void updateBook_givenValidInput_thenReturnsBookDto() {
+        Mockito.when(bookRepository.findById(book1.getId())).thenReturn(Optional.of(book1));
+        Mockito.when(authorRepository.findById(author1.getId())).thenReturn(Optional.of(author1));
+
+        BookDto updatedBook = bookService.updateBook(book1.getId(), updateBookDto);
+
+        Assertions.assertThat(updatedBook).isNotNull();
+    }
+
+    @Test
+    void updateBook_givenInvalidId_thenThrowsBookNotFoundException() {
+        Long invalidBookId = 100L;
+        Mockito.when(bookRepository.findById(invalidBookId)).thenReturn(Optional.empty());
+
+        Assertions.assertThatThrownBy(()-> bookService.updateBook(invalidBookId, updateBookDto))
+        .isInstanceOf(BookNotFoundException.class);
+    }
+
+    @Test
+    void updateBook_givenInvalidAuthorId_thenThrowsAuthorNotFoundException() {
+        long invalidAuthorId = 100;
+        Mockito.when(bookRepository.findById(book1.getId())).thenReturn(Optional.of(book1));
+        Mockito.when(authorRepository.findById(invalidAuthorId)).thenReturn(Optional.empty());
+
+        Assertions.assertThatThrownBy(()-> bookService.updateBook(book1.getId(), updateBookDto))
+        .isInstanceOf(AuthorNotFoundException.class);
+    }
+
+    @Test
+    void deleteBook_givenValidInput_thenReturnsString() {
+        Mockito.when(bookRepository.findById(book1.getId())).thenReturn(Optional.of(book1));
+
+        String result = bookService.deleteBook(book1.getId());
+
+        Assertions.assertThat(result).isEqualTo("Book has been deleted");
+    }
+
+    @Test
+    void deleteBook_givenInValidId_thenThrowsBookNotFoundException() {
+        Mockito.when(bookRepository.findById(book1.getId())).thenReturn(Optional.empty());
+
+       Assertions.assertThatThrownBy(()-> bookService.deleteBook(book1.getId())).isInstanceOf(BookNotFoundException.class);
     }
 }

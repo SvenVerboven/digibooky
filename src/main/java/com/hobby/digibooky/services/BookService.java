@@ -1,10 +1,14 @@
 package com.hobby.digibooky.services;
 
 import com.google.common.collect.Lists;
+import com.hobby.digibooky.domain.Author;
 import com.hobby.digibooky.domain.Book;
+import com.hobby.digibooky.domain.exceptions.AuthorNotFoundException;
 import com.hobby.digibooky.domain.exceptions.BookNotFoundException;
 import com.hobby.digibooky.dtos.BookDto;
 import com.hobby.digibooky.dtos.CreateBookDto;
+import com.hobby.digibooky.dtos.UpdateBookDto;
+import com.hobby.digibooky.infrastructure.AuthorRepository;
 import com.hobby.digibooky.infrastructure.BookRepository;
 import com.hobby.digibooky.mappers.BookMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,41 +25,69 @@ import java.util.stream.Collectors;
 public class BookService {
 
     private BookRepository bookRepository;
+    private AuthorRepository authorRepository;
 
     @Autowired
-    public BookService(BookRepository bookRepository) {
+    public BookService(BookRepository bookRepository, AuthorRepository authorRepository) {
         this.bookRepository = bookRepository;
+        this.authorRepository = authorRepository;
     }
 
-    public List<BookDto> getAllBooks(String isbn, String title, String firstName, String lastName){
+    public List<BookDto> getAllBooks(String isbn, String title, String firstName, String lastName) {
         if (isbn != null) {
             return getBookByIsbn(isbn);
         }
-        if(title != null){
+        if (title != null) {
             return getBookByTitle(title);
         }
-        if(firstName != null && lastName != null){
+        if (firstName != null && lastName != null) {
             return getBookByAuthorFullName(firstName, lastName);
         }
-        if(firstName != null){
+        if (firstName != null) {
             return getBookByAuthorFirstName(firstName);
         }
-        if(lastName != null){
+        if (lastName != null) {
             return getBookByAuthorLastName(lastName);
         }
         return BookMapper.toDto((List<Book>) bookRepository.findAll());
     }
 
     public BookDto getBookById(Long bookId) {
-        Optional<Book> book = bookRepository.findById(bookId);
-        if (!book.isPresent()) {
+        Optional<Book> optionalBook = bookRepository.findById(bookId);
+        if (!optionalBook.isPresent()) {
             throw new BookNotFoundException(bookId);
         }
-        return BookMapper.toDto(book.get());
+        return BookMapper.toDto(optionalBook.get());
     }
 
-    public BookDto saveBook(CreateBookDto createBookDto){
+    public BookDto saveBook(CreateBookDto createBookDto) {
         return BookMapper.toDto(bookRepository.save(BookMapper.toBook(createBookDto)));
+    }
+
+    public BookDto updateBook(Long id, UpdateBookDto updateBookDto) {
+        Optional<Book> optionalBook = bookRepository.findById(id);
+        if(!optionalBook.isPresent()){
+            throw new BookNotFoundException(id);
+        }
+        Book book = optionalBook.get();
+        book.setTitle(updateBookDto.getTitle());
+        book.setSummary(updateBookDto.getSummary());
+        Optional<Author> optionalAuthor = authorRepository.findById(updateBookDto.getAuthor().getId());
+        if(!optionalAuthor.isPresent()){
+            throw new AuthorNotFoundException(updateBookDto.getAuthor().getId());
+        }
+        Author author = optionalAuthor.get();
+        author.setFirstName(updateBookDto.getAuthor().getFirstName());
+        author.setLastName(updateBookDto.getAuthor().getLastName());
+        return BookMapper.toDto(book);
+    }
+
+    public String deleteBook(Long id){
+        Optional<Book> optionalBook = bookRepository.findById(id);
+        if(!optionalBook.isPresent()){
+            throw new BookNotFoundException(id);
+        }
+        return "Book has been deleted";
     }
 
     private List<BookDto> getBookByAuthorLastName(String lastName) {

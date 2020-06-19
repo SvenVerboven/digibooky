@@ -36,4 +36,8 @@ public class Author {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 }
